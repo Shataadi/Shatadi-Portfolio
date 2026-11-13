@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Shatadi Nkadimeng | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- navbar -->
+  <header>
+    <span class="logo">♡ SHATADI</span>
+    <nav>
+      <button class="nav-btn active" data-page="home">Home</button>
+      <button class="nav-btn" data-page="about">About</button>
+      <button class="nav-btn" data-page="skills">Skills</button>
+      <button class="nav-btn" data-page="projects">Projects</button>
+      <button class="nav-btn" data-page="contact">Contact</button>
+      <button id="theme-btn" aria-label="Switch between light and dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <div class="card hero">
+        <div>
+          <p class="pixel small">PLAYER 1 · READY!</p>
+          <h1>Hi, I’m <span class="pink">Shatadi Nkadimeng</span> ✨</h1>
+          <p>Software engineer who builds thoughtful, reliable software with a focus on clean code, clear communication and solutions that create real value.</p>
+          <button class="btn pink-btn" data-page="projects">See my projects</button>
+          <button class="btn" data-page="contact">Say hi</button>
+        </div>
+        <img id="avatar" class="avatar" src="download.jpg" alt="Shatadi Nkadimeng" title="Click for hearts">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <h2 class="pixel title">🌷 ABOUT ME</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Background</h3>
+          <p>I’m Shatadi, a software engineering student from Polokwane, Limpopo. I like turning ideas into working software, from friendly interfaces to the databases behind them.</p>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <p>Third-year Software Engineering student at CTU Polokwane, learning on the job through Work Integrated Learning (WIL) placements.</p>
+        </div>
+        <div class="card">
+          <h3>Outside coding</h3>
+          <p>Gaming and spending time with friends and family.</p>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="page">
+      <h2 class="pixel title">💻 SKILLS UNLOCKED</h2>
+      <div class="card skills">
+        <div class="skill"><span>🏛️</span>Delphi</div>
+        <div class="skill"><span>🐍</span>Python</div>
+        <div class="skill"><span>🌐</span>HTML</div>
+        <div class="skill"><span>🎨</span>CSS</div>
+        <div class="skill"><span>⚡</span>JavaScript</div>
+        <div class="skill"><span>🐘</span>PHP</div>
+        <div class="skill"><span>☕</span>Java</div>
+        <div class="skill"><span>🎯</span>C#</div>
+        <div class="skill"><span>🗄️</span>SQL</div>
+      </div>
+    </section>
+    
+    <!-- PROJECTS -->
+    <section id="projects" class="page">
+      <h2 class="pixel title">🎮 QUEST LOG</h2>
+      <div class="grid">
+
+        <article class="card">
+          <div class="thumb">🏫</div>
+          <h3>Dummy School Website</h3>
+          <p>A practice school website with home, about, courses, staff and contact pages.</p>
+          <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></p>
+          <!-- my GitHub username -->
+          <a class="btn pink-btn" href="https://github.com/Shataadi/School-Website" target="_blank" rel="noopener">GitHub repo</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">🏠</div>
+          <h3>Real Estate Platform</h3>
+          <p>A project that helps people find homes to buy or rent..</p>
+          <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span></p>
+          <a class="btn pink-btn" href="https://github.com/Shataadi/Real-Estate" target="_blank" rel="noopener">GitHub repo</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">💶</div>
+          <h3>Payroll Management System</h3>
+          <p>A payroll management system for handling employee compensation and benefits.</p>
+          <p><span class="tag">C#</span></p>
+          <a class="btn pink-btn" href="https://github.com/Shataadi/PM-04" target="_blank" rel="noopener">GitHub repo</a>
+        </article>
+
+        <article class="card" style="text-align:center">
+        <div class="thumb">🔒</div>
+        <h3>New quest unlocking…</h3>
+        <p class="muted">More projects coming soon!</p>
+      </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page">
+      <h2 class="pixel title">💌 LET’S CONNECT</h2>
+      <div class="grid">
+        <div class="card">
+          
+          <a class="contact-link" href="mailto:shatadinkadimeng1@gmail.com">📧 shatadinkadimeng1@gmail.com</a>
+          <a class="contact-link" href="https://github.com/Shataadi" target="_blank" rel="noopener">🐙 github.com/Shataadi</a>
+          <a class="contact-link" href="https://www.linkedin.com/in/shatadi-nkadimeng-6784b7303/" target="_blank" rel="noopener">💼 linkedin.com/in/shatadi-nkadimeng-6784b7303/</a>
+        </div>
+        <div class="card">
+          <h3>📄 My CV</h3>
+          <p>Want the full story? Grab my CV here.</p>
+          <!-- put my CV pdf in the same folder with this exact name -->
+          <a class="btn pink-btn" href="Shatadi_NkadimengCV (3).pdf" download>⬇ Download CV</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>Made by Shatadi</footer>
+
+  <!-- music player -->
+  <div id="music-box">
+    <div id="music-panel" class="card">
+      <h3>🎵 Music player</h3>
+      <p id="song-name" class="small">Now playing: Lofi afro beats</p>
+      <div id="youtube-player"></div>
+      <button class="btn pink-btn" id="play-btn">⏸ Pause</button>
+      <input type="range" id="volume" min="0" max="1" step="0.1" value="0.6" aria-label="Volume">
+    </div>
+    <button id="music-btn" aria-label="Open music player">🎵</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* colours - change these to change the whole theme */
+:root {
+  --bg: #fff0f7;
+  --card: #ffffff;
+  --text: #4a3560;
+  --soft-text: #8a74a3;
+  --pink: #ff8fc7;
+  --pink-light: #ffd6ec;
+  --purple: #b9a3ff;
+  --purple-light: #e6dcff;
+  --border: #ffc2e2;
+}
+
+/* dark mode colours (the JS adds the class "dark" to body) */
+body.dark {
+  --bg: #21173a;
+  --card: #2c2048;
+  --text: #f6e9ff;
+  --soft-text: #bba6dc;
+  --pink-light: #4a2750;
+  --purple-light: #372b63;
+  --border: #6b3f80;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Fredoka", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+/* header and nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: var(--card);
+  border-bottom: 3px dashed var(--border);
+}
+
+.logo {
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  color: var(--pink);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-btn, #theme-btn {
+  border: none;
+  padding: 7px 16px;
+  border-radius: 20px;
+  background-color: var(--purple-light);
+  color: var(--text);
+  box-shadow: 0 3px 0 var(--purple);
+}
+
+.nav-btn.active {
+  background-color: var(--pink);
+  color: white;
+  box-shadow: 0 3px 0 #d5629e;
+}
+
+/* main content */
+main {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 25px 15px 90px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.card {
+  background-color: var(--card);
+  border: 3px solid var(--border);
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 6px 0 var(--purple-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.pixel {
+  font-family: "Press Start 2P", monospace;
+  line-height: 1.7;
+}
+
+.title {
+  font-size: 16px;
+  color: var(--purple);
+  margin-bottom: 20px;
+}
+
+.small {
+  font-size: 0.85rem;
+  color: var(--soft-text);
+}
+
+.pink {
+  color: var(--pink);
+}
+
+/* buttons and links that look like buttons */
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 8px 18px;
+  margin: 4px 4px 4px 0;
+  border-radius: 20px;
+  background-color: var(--purple-light);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 3px 0 var(--purple);
+}
+
+.pink-btn {
+  background-color: var(--pink);
+  color: white;
+  box-shadow: 0 3px 0 #d5629e;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* home */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.avatar {
+  display: block;
+  width: 220px;
+  height: 220px;
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid var(--pink);
+  background-color: var(--pink-light);
+  object-fit: cover;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+
+/* skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 15px;
+}
+
+.skill {
+  text-align: center;
+  padding: 15px 5px;
+  border-radius: 20px;
+  background-color: var(--pink-light);
+  border: 3px solid var(--border);
+}
+
+.skill span {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.skill:hover {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+/* projects */
+.thumb {
+  height: 110px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  background-color: var(--purple-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--pink-light);
+  border-radius: 20px;
+  padding: 2px 12px;
+  margin: 2px 4px 2px 0;
+  font-size: 0.85rem;
+}
+
+/* contact */
+.contact-link {
+  display: block;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  background-color: var(--purple-light);
+  color: var(--text);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-link:hover {
+  background-color: var(--pink-light);
+}
+
+/* music player */
+#music-box {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 20;
+}
+
+#music-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: var(--pink);
+  font-size: 1.5rem;
+}
+
+#music-panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 65px;
+  width: 270px;
+}
+
+#music-panel.open {
+  display: block;
+}
+
+#youtube-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 10px;
+}
+
+#youtube-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#volume {
+  width: 90px;
+  vertical-align: middle;
+}
+
+.heart {
+  position: fixed;
+  pointer-events: none;
+  animation: rise 1.2s ease-out forwards;
+}
+
+@keyframes rise {
+  to { transform: translateY(-80px); opacity: 0; }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: var(--soft-text);
+}
+
+/* phone and small screens */
+@media (max-width: 700px) {
+  header {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+    font-size: 4rem;
+  }
+}
